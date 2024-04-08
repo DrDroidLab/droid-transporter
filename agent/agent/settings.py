@@ -128,7 +128,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-DRDROID_PROXY_API_TOKEN = env.str("DRDROID_PROXY_API_TOKEN")
+DRDROID_PROXY_API_TOKEN = env.str("DRDROID_API_TOKEN")
 
 GRAFANA_HOST = env.str("GRAFANA_HOST", default=None)
 GRAFANA_API_KEY = env.str("GRAFANA_API_KEY", default=None)
