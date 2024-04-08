@@ -5,8 +5,8 @@ Read more [here](https://docs.drdroid.io/docs).
 
 ## Documentation
 
-The Agent is software that runs on your hosts. It acts as a reverse proxy to connect with your metric sources and send
-metrics and related data to doctor droid.
+The Agent runs inside your VPC and acts as a reverse proxy to connect with your metric sources and send
+metrics and related data to doctor droid platform. 
 
 Currently, the agent supports the following metric sources:
 
