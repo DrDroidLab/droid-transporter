@@ -13,7 +13,7 @@ RUN apt-get update \
   && apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false \
   && rm -rf /var/lib/apt/lists/*
 
-COPY nginx.default /etc/nginx/sites-available/default
+COPY agent/nginx.default /etc/nginx/sites-available/default
 RUN ln -sf /dev/stdout /var/log/nginx/access.log \
     && ln -sf /dev/stderr /var/log/nginx/error.log
 
@@ -26,14 +26,14 @@ ENV PYTHONUNBUFFERED 1
 WORKDIR /code
 
 # Copy project
-COPY .. .
+COPY ../agent .
 RUN chown -R www-data:www-data /code
 
 # Install dependenciess
-COPY ./requirements.txt .
+COPY agent/requirements.txt .
 RUN pip install -r requirements.txt
 
-COPY start-server.sh .
+COPY agent/start-server.sh .
 RUN sed -i 's/\r$//g' start-server.sh
 RUN chmod +x start-server.sh
 
