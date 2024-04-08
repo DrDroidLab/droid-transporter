@@ -37,17 +37,5 @@ COPY start-server.sh .
 RUN sed -i 's/\r$//g' start-server.sh
 RUN chmod +x start-server.sh
 
-#COPY ./start-celery-worker.sh .
-#RUN sed -i 's/\r$//g' start-celery-worker.sh
-#RUN chmod +x start-celery-worker.sh
-#
-#COPY ./start-celery-beat.sh .
-#RUN sed -i 's/\r$//g' start-celery-beat.sh
-#RUN chmod +x start-celery-beat.sh
-#
-#COPY ./start-celery-flower.sh .
-#RUN sed -i 's/\r$//g' start-celery-flower.sh
-#RUN chmod +x start-celery-flower.sh
-
 EXPOSE 8080
 STOPSIGNAL SIGTERM
