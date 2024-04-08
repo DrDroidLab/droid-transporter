@@ -27,7 +27,7 @@ visiting [site](https://playbooks.drdroid.io/api-keys)
 Once auth token is available, you can set the env var as:
 
 ```shell
-docker-compose up -e DRDROID_API_TOKEN=<TOKEN> -e GRAFANA_HOST=<GRAFANA_HOST> -e GRAFANA_API_KEY=<GRAFANA_API_KEY>
+DRDROID_API_TOKEN=<API_TOKEN> GRAFANA_HOST=<HOST> GRAFANA_API_KEY=<KEY> docker-compose -f agent.docker-compose.yml up
 ```
 
 ## Support

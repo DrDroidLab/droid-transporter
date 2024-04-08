@@ -15,8 +15,8 @@ services:
     ports:
       - 8080:8080
     environment:
-      - "DRDROID_API_TOKEN=<API_TOKEN>"
-      - "GRAFANA_HOST=<OPTIONAL>"
-      - "GRAFANA_API_KEY=<OPTIONAL>"
+      - "DRDROID_API_TOKEN=${DRDROID_API_TOKEN}"
+      - "GRAFANA_HOST=${GRAFANA_HOST}"
+      - "GRAFANA_API_KEY=${GRAFANA_API_KEY}"
     depends_on:
       - redis
