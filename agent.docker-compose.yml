@@ -1,15 +1,7 @@
 version: '3.9'
 
 services:
-  redis:
-    image: 'redis:alpine'
-    ports:
-      - '6379:6379'
-
   server:
-    build:
-      context: .
-      dockerfile: Dockerfile
     image: public.ecr.aws/y9s1f3r5/drdoid/transporter-agent:latest
     container_name: drdroid_transporter_agent
     command: ./start-server.sh
@@ -19,8 +11,6 @@ services:
       - "DRDROID_API_TOKEN=${DRDROID_API_TOKEN}"
       - "GRAFANA_HOST=${GRAFANA_HOST}"
       - "GRAFANA_API_KEY=${GRAFANA_API_KEY}"
-    depends_on:
-      - redis
     networks:
       - mynetwork
 
