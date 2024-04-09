@@ -26,7 +26,7 @@ ENV PYTHONUNBUFFERED 1
 WORKDIR /code
 
 # Copy project
-COPY ../agent .
+COPY ./agent .
 RUN chown -R www-data:www-data /code
 
 # Install dependenciess
