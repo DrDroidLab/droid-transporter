@@ -10,7 +10,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: drd-proxy-agent
+    image: public.ecr.aws/y9s1f3r5/drdoid/transporter-agent:latest
+    container_name: drdroid_transporter_agent
     command: ./start-server.sh
     ports:
       - 8080:8080
@@ -20,3 +21,9 @@ services:
       - "GRAFANA_API_KEY=${GRAFANA_API_KEY}"
     depends_on:
       - redis
+    networks:
+      - mynetwork
+
+
+networks:
+  mynetwork:

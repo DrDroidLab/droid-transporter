@@ -6,9 +6,9 @@ Read more [here](https://docs.drdroid.io/docs).
 ## Documentation
 
 The Agent runs inside your VPC and acts as a reverse proxy to connect with your metric sources and send
-metrics and related data to doctor droid platform. 
+metrics and related data to doctor droid platform.
 
-Currently, the agent supports the following metric sources:
+Currently, the agent supports the following metric sources in your VPC:
 
 * Grafana
 
